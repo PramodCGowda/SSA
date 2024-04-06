@@ -32,7 +32,7 @@ public class VendingMachine1 extends VendingMachine {
 
     public void coin(float v) {
         DataStore_1 ds1 = (DataStore_1) this.dataStore;
-        ds1.setTemp_v(v);
+        ds1.setTemp_v(v); //TODO temp and cf values are not reset - investigate
         if(ds1.getCf() + v >= ds1.getPrice()) {
             m.coin(1);
         } else {
